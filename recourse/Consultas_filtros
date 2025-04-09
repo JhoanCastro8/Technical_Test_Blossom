@@ -1,0 +1,94 @@
+//Consulta sin filtros
+query {
+    characters {
+      id
+      name
+      status
+      species
+      gender
+      origin {
+        name
+      }
+    }
+  }
+
+
+//Consulta por especie especifica
+query {
+    characters(species: "Human") {
+        id
+        name
+        species
+    }
+}
+
+
+//Consulta por nombre
+query {
+    characters(name: "Rick") {
+        id
+        name
+        status
+        species
+        gender
+      origin {
+            name
+        }
+    }
+}
+
+//Consulta por estado 
+query {
+    characters(status: "Alive") {
+        id
+        name
+        status
+        species
+        gender
+      origin {
+            name
+        }
+    }
+}
+
+//Consulta por especie
+query {
+    characters(species: "Human") {
+        id
+        name
+        status
+        species
+        gender
+      origin {
+            name
+        }
+    }
+}
+
+//Consulta por genero
+query {
+    characters(gender: "Male") {
+        id
+        name
+        status
+        species
+        gender
+      origin {
+            name
+        }
+    }
+}
+
+//Consulta por origen
+query {
+    characters(origin: "Earth (C-137)") {
+        id
+        name
+        status
+        species
+        gender
+      origin {
+            name
+        }
+    }
+}

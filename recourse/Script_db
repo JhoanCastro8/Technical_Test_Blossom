@@ -1,0 +1,15 @@
+    CREATE DATABASE IF NOT EXISTS rick_and_morty_db;
+    USE rick_and_morty_db;
+    CREATE TABLE IF NOT EXISTS Characters (
+        id INT PRIMARY KEY,
+        name VARCHAR(255),
+        status VARCHAR(255),
+        species VARCHAR(255),
+        gender VARCHAR(255),
+        origin VARCHAR(255)
+    );
+    CREATE INDEX idx_name ON Characters (name);
+    CREATE INDEX idx_status ON Characters (status);
+    CREATE INDEX idx_species ON Characters (species);
+    CREATE INDEX idx_gender ON Characters (gender);
+    CREATE INDEX idx_origin ON Characters (origin);
